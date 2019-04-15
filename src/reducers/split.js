@@ -1,8 +1,8 @@
 const splitReducerDefaultState = {
   total: undefined,
   bill: undefined,
-  friends: undefined,
-  tips: undefined
+  friends: 3,
+  tips: 0
 }
 
 export default (state = splitReducerDefaultState, action) => {
