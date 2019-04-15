@@ -7,9 +7,13 @@ import styled, { createGlobalStyle } from 'styled-components'
 import 'normalize.css'
 
 const GlobalStyle = createGlobalStyle`
+  @import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
+
   html {
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
   }
+  
   *, *:before, *:after {
     box-sizing: inherit;
   }

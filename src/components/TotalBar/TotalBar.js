@@ -52,7 +52,7 @@ const TotalBar = props => {
         </TotalBarField>
         <TotalBarField>
           <Text small>Friends</Text>
-          <Text small>${friends}</Text>
+          <Text small>{friends}</Text>
         </TotalBarField>
         <TotalBarField>
           <Text small>Tips({tips}%)</Text>
