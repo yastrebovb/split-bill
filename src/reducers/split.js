@@ -17,6 +17,16 @@ export default (state = splitReducerDefaultState, action) => {
         ...state,
         tips: action.tips
       }
+    case 'EDIT_BILL':
+      return {
+        ...state,
+        bill: state.bill === undefined ? action.bill : state.bill + action.bill
+      }
+    case 'DELETE_BILL':
+      return {
+        ...state,
+        bill: state.bill.slice(0, -1)
+      }
     default:
       return state
   }

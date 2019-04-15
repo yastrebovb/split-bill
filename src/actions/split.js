@@ -8,8 +8,11 @@ export const editTips = tips => ({
   tips
 })
 
-export const editPerson = (id, updates) => ({
-  type: 'EDIT_PERSON',
-  id,
-  updates
+export const editBill = bill => ({
+  type: 'EDIT_BILL',
+  bill
+})
+
+export const deleteBill = () => ({
+  type: 'DELETE_BILL'
 })
