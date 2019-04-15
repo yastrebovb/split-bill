@@ -1,6 +1,19 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { editBill, deleteBill } from '../../actions/split'
+import styled from 'styled-components'
+
+const BillInputWrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+`
+
+const BillInputKey = styled.div`
+  width: 25%;
+  margin: 12px;
+  text-align: center;
+`
 
 class BillInput extends Component {
   state = {
@@ -23,13 +36,13 @@ class BillInput extends Component {
 
   render() {
     return (
-      <div>
+      <BillInputWrapper>
         {this.state.keys.map(key => (
-          <div key={key} onClick={this.handleKey.bind(this, key)}>
+          <BillInputKey key={key} onClick={this.handleKey.bind(this, key)}>
             {key}
-          </div>
+          </BillInputKey>
         ))}
-      </div>
+      </BillInputWrapper>
     )
   }
 }
