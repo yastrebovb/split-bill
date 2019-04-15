@@ -2,7 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 
 const TotalBar = props => {
-  const { total, bill, friends, tipsPercentage, tipsValue } = props.split
+  const { total, bill, friends, tips } = props.split
 
   return (
     <div className="total-bar">
@@ -20,8 +20,8 @@ const TotalBar = props => {
           <p className="total-bar__value">${friends}</p>
         </div>
         <div className="total-bar__field">
-          <p className="total-bar__title">Tips({tipsPercentage}%)</p>
-          <p className="total-bar__value">${tipsValue}</p>
+          <p className="total-bar__title">Tips({tips}%)</p>
+          <p className="total-bar__value">${}</p>
         </div>
       </div>
     </div>

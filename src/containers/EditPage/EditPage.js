@@ -1,7 +1,14 @@
-import React, { Component } from 'react'
+import React from 'react'
+import FriendsInput from '../../components/FriendsInput/FriendsInput'
+import TipsInput from '../../components/TipsInput/TipsInput'
 
-export default class EditPage extends Component {
-  render() {
-    return <div className="edit-page" />
-  }
+const EditPage = () => {
+  return (
+    <div>
+      <FriendsInput />
+      <TipsInput />
+    </div>
+  )
 }
+
+export default EditPage

@@ -7,5 +7,9 @@ export default () => {
     combineReducers({ split: splitReducer, persons: personsReducer })
   )
 
+  store.subscribe(() => {
+    console.log(store.getState())
+  })
+
   return store
 }
