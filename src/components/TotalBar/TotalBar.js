@@ -36,7 +36,7 @@ const Text = styled.p`
 `
 
 const TotalBar = props => {
-  const { total, bill, friends, tips } = props.split
+  const { total, bill, friends, tipsPercentage, tipsAmount } = props.split
 
   return (
     <TotalBarWrapper>
@@ -55,8 +55,8 @@ const TotalBar = props => {
           <Text small>{friends}</Text>
         </TotalBarField>
         <TotalBarField>
-          <Text small>Tips({tips}%)</Text>
-          <Text small>${}</Text>
+          <Text small>Tips({tipsPercentage}%)</Text>
+          <Text small>${tipsAmount}</Text>
         </TotalBarField>
       </TotalBarFields>
     </TotalBarWrapper>

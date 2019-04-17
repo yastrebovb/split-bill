@@ -3,9 +3,9 @@ export const editFriends = friends => ({
   friends
 })
 
-export const editTips = tips => ({
+export const editTips = tipsPercentage => ({
   type: 'EDIT_TIPS',
-  tips
+  tipsPercentage
 })
 
 export const editBill = bill => ({

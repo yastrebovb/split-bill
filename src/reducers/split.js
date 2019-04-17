@@ -1,11 +1,14 @@
 const splitReducerDefaultState = {
-  total: undefined,
-  bill: undefined,
+  total: 0,
+  bill: 0,
   friends: 3,
-  tips: 0
+  tipsPercentage: 0,
+  tipsAmount: 0
 }
 
 export default (state = splitReducerDefaultState, action) => {
+  let bill
+
   switch (action.type) {
     case 'EDIT_FRIENDS':
       return {
@@ -15,17 +18,31 @@ export default (state = splitReducerDefaultState, action) => {
     case 'EDIT_TIPS':
       return {
         ...state,
-        tips: action.tips
+        tipsPercentage: action.tipsPercentage,
+        tipsAmount: (state.bill * (action.tipsPercentage / 100)).toFixed(2),
+        total:
+          +state.bill + +(state.bill * (action.tipsPercentage / 100)).toFixed(2)
       }
     case 'EDIT_BILL':
+      bill = state.bill === 0 ? action.bill : state.bill + action.bill
+
       return {
         ...state,
-        bill: state.bill === undefined ? action.bill : state.bill + action.bill
+        bill,
+        tipsAmount: (bill * (state.tipsPercentage / 100)).toFixed(2),
+        total: +bill + +(bill * (state.tipsPercentage / 100)).toFixed(2)
       }
     case 'DELETE_BILL':
+      bill =
+        Number(state.bill) && state.bill.length > 1
+          ? state.bill.slice(0, -1)
+          : 0
+
       return {
         ...state,
-        bill: state.bill.slice(0, -1)
+        bill,
+        tipsAmount: (bill * (state.tipsPercentage / 100)).toFixed(2),
+        total: +bill + +(bill * (state.tipsPercentage / 100)).toFixed(2)
       }
     default:
       return state
