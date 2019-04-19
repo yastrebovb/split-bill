@@ -3,7 +3,7 @@ const personsReducerDefaultState = []
 export default (state = personsReducerDefaultState, action) => {
   switch (action.type) {
     case 'ADD_PERSON':
-      return [...state, action.personData]
+      return [...state, action.payload]
     case 'REMOVE_PERSON':
       return state.filter(({ id }) => id !== action.id)
     case 'EDIT_PERSON':

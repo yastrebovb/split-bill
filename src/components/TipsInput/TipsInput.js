@@ -23,7 +23,7 @@ class TipsInput extends Component {
   }
 
   handleTipClick = tipValue => {
-    this.props.dispatch(editTips(tipValue))
+    this.props.editTips(tipValue)
 
     this.setState({
       currentTip: tipValue
@@ -49,4 +49,15 @@ class TipsInput extends Component {
   }
 }
 
-export default connect()(TipsInput)
+const mapDispatchToProps = dispatch => {
+  return {
+    editTips: tipValue => {
+      dispatch(editTips(tipValue))
+    }
+  }
+}
+
+export default connect(
+  null,
+  mapDispatchToProps
+)(TipsInput)

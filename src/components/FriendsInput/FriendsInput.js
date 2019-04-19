@@ -3,7 +3,7 @@ import Slider from 'rc-slider'
 import { connect } from 'react-redux'
 import { editFriends } from '../../actions/split'
 
-const FriendsInput = ({ dispatch, friends }) => {
+const FriendsInput = ({ editFriends, friends }) => {
   const handleStyle = {
     position: 'relative',
     top: '-70px',
@@ -28,7 +28,7 @@ const FriendsInput = ({ dispatch, friends }) => {
         }}
         railStyle={{ backgroundColor: '#f7f1e3', height: '30px' }}
         onChange={value => {
-          dispatch(editFriends(value))
+          editFriends(value)
         }}
       />
     </div>
@@ -41,4 +41,15 @@ const mapStateToProps = state => {
   }
 }
 
-export default connect(mapStateToProps)(FriendsInput)
+const mapDispatchToProps = dispatch => {
+  return {
+    editFriends: value => {
+      dispatch(editFriends(value))
+    }
+  }
+}
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(FriendsInput)
