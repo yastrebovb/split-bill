@@ -26,7 +26,7 @@ const mapStateToProps = state => {
   return {
     total: state.split.total,
     friends: state.split.friends,
-    equalDivided: state.split.total / state.split.friends,
+    equalDivided: (state.split.total / state.split.friends).toFixed(2),
     persons: state.persons
   }
 }
