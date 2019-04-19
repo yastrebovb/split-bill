@@ -1,6 +1,6 @@
 import uuid from 'uuid'
 
-export const addPerson = ({ amount = 1, locked = false } = {}) => ({
+export const addPerson = (amount, locked = false) => ({
   type: 'ADD_PERSON',
   payload: {
     id: uuid(),
