@@ -19,9 +19,7 @@ export default (state = splitReducerDefaultState, action) => {
       return {
         ...state,
         tipsPercentage: action.tipsPercentage,
-        tipsAmount: (state.bill * (action.tipsPercentage / 100)).toFixed(2),
-        total:
-          +state.bill + +(state.bill * (action.tipsPercentage / 100)).toFixed(2)
+        tipsAmount: (state.bill * (action.tipsPercentage / 100)).toFixed(2)
       }
     case 'EDIT_BILL':
       bill = state.bill === 0 ? action.bill : state.bill + action.bill
@@ -29,8 +27,7 @@ export default (state = splitReducerDefaultState, action) => {
       return {
         ...state,
         bill,
-        tipsAmount: (bill * (state.tipsPercentage / 100)).toFixed(2),
-        total: +bill + +(bill * (state.tipsPercentage / 100)).toFixed(2)
+        tipsAmount: (bill * (state.tipsPercentage / 100)).toFixed(2)
       }
     case 'DELETE_BILL':
       bill =
@@ -41,8 +38,13 @@ export default (state = splitReducerDefaultState, action) => {
       return {
         ...state,
         bill,
-        tipsAmount: (bill * (state.tipsPercentage / 100)).toFixed(2),
-        total: +bill + +(bill * (state.tipsPercentage / 100)).toFixed(2)
+        tipsAmount: (bill * (state.tipsPercentage / 100)).toFixed(2)
+      }
+    case 'CALCULATE_TOTAL':
+      console.log('CALCILATE TOTAL')
+      return {
+        ...state,
+        total: +state.bill + +state.tipsAmount
       }
     default:
       return state
