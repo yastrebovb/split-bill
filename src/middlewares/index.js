@@ -1,3 +1,2 @@
-import calculationsMiddleware from './calculations'
-
-export default calculationsMiddleware
+export { default as calculationsMiddleware } from './calculations'
+export { default as personsMiddleware } from './persons'

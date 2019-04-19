@@ -1,4 +1,20 @@
-const personsReducerDefaultState = []
+const personsReducerDefaultState = [
+  {
+    id: 1,
+    amount: 0,
+    locked: false
+  },
+  {
+    id: 2,
+    amount: 0,
+    locked: false
+  },
+  {
+    id: 3,
+    amount: 0,
+    locked: false
+  }
+]
 
 export default (state = personsReducerDefaultState, action) => {
   switch (action.type) {
