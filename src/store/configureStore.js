@@ -1,7 +1,7 @@
 import { createStore, applyMiddleware } from 'redux'
-import calculateTotalMiddleware from '../middlewares/calculateTotal'
 import splitReducer from '../reducers/split'
 import personsReducer from '../reducers/persons'
+import middlewares from '../middlewares/'
 
 export default () => {
   const store = createStore(
@@ -9,7 +9,7 @@ export default () => {
       split: splitReducer(state.split, action, state),
       persons: personsReducer(state.persons, action, state)
     }),
-    applyMiddleware(calculateTotalMiddleware)
+    applyMiddleware(middlewares)
   )
 
   store.subscribe(() => {
