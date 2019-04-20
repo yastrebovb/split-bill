@@ -9,7 +9,7 @@ const Person = ({ amount }) => {
         height: 200
       }}
     >
-      Sample with default size
+      {amount}
     </Resizable>
   )
 }

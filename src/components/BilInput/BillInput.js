@@ -59,7 +59,7 @@ const mapDispatchToProps = dispatch => {
       dispatch(editBill(keyValue))
     },
     deleteBill: bill => {
-      Number(bill) && bill.length > 1 && dispatch(deleteBill())
+      Number(bill) && bill.length > 0 && dispatch(deleteBill())
     }
   }
 }

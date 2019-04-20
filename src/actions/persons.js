@@ -17,3 +17,5 @@ export const editPerson = (id, updates) => ({
   id,
   updates
 })
+
+export const deletePersons = () => ({ type: 'DELETE_PERSONS' })

@@ -1,20 +1,4 @@
-const personsReducerDefaultState = [
-  {
-    id: 1,
-    amount: 0,
-    locked: false
-  },
-  {
-    id: 2,
-    amount: 0,
-    locked: false
-  },
-  {
-    id: 3,
-    amount: 0,
-    locked: false
-  }
-]
+const personsReducerDefaultState = []
 
 export default (state = personsReducerDefaultState, action) => {
   switch (action.type) {
@@ -30,6 +14,8 @@ export default (state = personsReducerDefaultState, action) => {
           return person
         }
       })
+    case 'DELETE_PERSONS':
+      return []
     default:
       return state
   }

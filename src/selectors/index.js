@@ -3,11 +3,15 @@ import { createSelector } from 'reselect'
 const splitSelector = state => state.split
 const personsSelector = state => state.persons
 
+export const getPersonsQuantity = createSelector(
+  splitSelector,
+  split => split.friends
+)
+
 export const getLastPersonId = createSelector(
   personsSelector,
   personsList => {
-    console.log(personsList)
-    return [...personsList].pop().id
+    return [...personsList].length ? [...personsList].pop().id : 1
   }
 )
 
