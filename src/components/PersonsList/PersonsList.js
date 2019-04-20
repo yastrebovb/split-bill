@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Person from '../Person/Person'
 import { connect } from 'react-redux'
-import { addPerson, removePerson, deletePersons } from '../../actions/persons'
+import { addPerson, deletePersons } from '../../actions/persons'
 import {
   getPersonsQuantity,
   getLastPersonId,
@@ -9,13 +9,6 @@ import {
 } from '../../selectors/'
 
 class PersonsList extends Component {
-  componentWillMount() {
-    this.props.deletePersons()
-    for (let i = 1; i <= this.props.friends; i++) {
-      this.props.addPerson(i, this.props.dividedTotal)
-    }
-  }
-
   render() {
     return (
       <div>
@@ -42,9 +35,6 @@ const mapDispatchToProps = dispatch => {
   return {
     addPerson: (id, amount) => {
       dispatch(addPerson(id, amount))
-    },
-    removePerson: id => {
-      dispatch(removePerson(id))
     },
     deletePersons: () => {
       dispatch(deletePersons())

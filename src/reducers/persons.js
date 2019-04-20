@@ -1,5 +1,19 @@
 const personsReducerDefaultState = []
 
+const generatePersons = (quantity, amount) => {
+  let res = []
+
+  for (let i = 1; i <= quantity; i++) {
+    res.push({
+      id: i,
+      locked: false,
+      amount
+    })
+  }
+
+  return res
+}
+
 export default (state = personsReducerDefaultState, action) => {
   switch (action.type) {
     case 'ADD_PERSON':
@@ -14,6 +28,8 @@ export default (state = personsReducerDefaultState, action) => {
           return person
         }
       })
+    case 'GENERATE_PERSONS':
+      return generatePersons(action.quantity, action.amount)
     case 'DELETE_PERSONS':
       return []
     default:
