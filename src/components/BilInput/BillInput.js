@@ -26,7 +26,7 @@ class BillInput extends Component {
       case '+':
         break
       case 'delete':
-        this.props.deleteBill()
+        this.props.deleteBill(this.props.bill)
         break
       default:
         this.props.editBill(keyValue)
@@ -47,18 +47,24 @@ class BillInput extends Component {
   }
 }
 
+const mapStateToProps = state => {
+  return {
+    bill: state.split.bill
+  }
+}
+
 const mapDispatchToProps = dispatch => {
   return {
     editBill: keyValue => {
       dispatch(editBill(keyValue))
     },
-    deleteBill: () => {
-      dispatch(deleteBill())
+    deleteBill: bill => {
+      Number(bill) && bill.length > 1 && dispatch(deleteBill())
     }
   }
 }
 
 export default connect(
-  null,
+  mapStateToProps,
   mapDispatchToProps
 )(BillInput)
