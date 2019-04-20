@@ -7,7 +7,6 @@ const personsMiddleware = ({ dispatch }) => next => action => {
 
   switch (action.type) {
     case 'EDIT_FRIENDS':
-      alert('EDITED FRIENDS')
       break
     default:
       return
