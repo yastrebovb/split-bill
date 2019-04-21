@@ -1,4 +1,20 @@
-const personsReducerDefaultState = []
+const personsReducerDefaultState = [
+  {
+    id: 1,
+    locked: false,
+    amount: 1
+  },
+  {
+    id: 1,
+    locked: false,
+    amount: 1
+  },
+  {
+    id: 1,
+    locked: false,
+    amount: 1
+  }
+]
 
 const generatePersons = (quantity, amount) => {
   let res = []

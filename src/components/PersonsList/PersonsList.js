@@ -1,15 +1,24 @@
 import React, { Component } from 'react'
 import Person from '../Person/Person'
 import { connect } from 'react-redux'
+import styled from 'styled-components'
+
+const Persons = styled.div`
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  height: 322px;
+`
 
 class PersonsList extends Component {
   render() {
     return (
-      <div>
+      <Persons>
         {this.props.persons.map(person => (
           <Person amount={person.amount} />
         ))}
-      </div>
+      </Persons>
     )
   }
 }
