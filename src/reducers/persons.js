@@ -5,12 +5,12 @@ const personsReducerDefaultState = [
     amount: 1
   },
   {
-    id: 1,
+    id: 2,
     locked: false,
     amount: 1
   },
   {
-    id: 1,
+    id: 3,
     locked: false,
     amount: 1
   }
@@ -46,8 +46,6 @@ export default (state = personsReducerDefaultState, action) => {
       })
     case 'GENERATE_PERSONS':
       return generatePersons(action.quantity, action.amount)
-    case 'DELETE_PERSONS':
-      return []
     default:
       return state
   }

@@ -18,8 +18,6 @@ export const editPerson = (id, updates) => ({
   updates
 })
 
-export const deletePersons = () => ({ type: 'DELETE_PERSONS' })
-
 export const generatePersons = (quantity, amount) => ({
   type: 'GENERATE_PERSONS',
   quantity,
