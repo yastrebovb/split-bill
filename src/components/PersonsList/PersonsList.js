@@ -7,7 +7,7 @@ const Persons = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
-  align-items: stretch;
+  justfiy-content: center;
   height: 322px;
 `
 
@@ -16,7 +16,7 @@ class PersonsList extends Component {
     return (
       <Persons>
         {this.props.persons.map(person => (
-          <Person amount={person.amount} />
+          <Person id={person.id} amount={person.amount} />
         ))}
       </Persons>
     )
