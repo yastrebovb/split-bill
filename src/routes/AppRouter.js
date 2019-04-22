@@ -7,11 +7,11 @@ import styled, { createGlobalStyle } from 'styled-components'
 import 'normalize.css'
 
 const GlobalStyle = createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
+  @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
 
   html {
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Open Sans', sans-serif;
   }
 
   *, *:before, *:after {
