@@ -17,7 +17,7 @@ const SwitchLink = withRouter(props => (
       textAlign: 'center',
       textDecoration: 'none',
       color: '#ffffff',
-      transition: 'width .2s ease-out'
+      transition: 'width .3s ease-out'
     }}
     activeStyle={{
       margin: '58px auto -60px',

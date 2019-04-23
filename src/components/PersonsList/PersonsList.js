@@ -1,27 +1,15 @@
-import React, { Component } from 'react'
+import React from 'react'
 import Person from '../Person/Person'
 import { connect } from 'react-redux'
-import styled from 'styled-components'
+import { Persons } from './style'
 
-const Persons = styled.div`
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justfiy-content: center;
-  height: 322px;
-`
-
-class PersonsList extends Component {
-  render() {
-    return (
-      <Persons>
-        {this.props.persons.map(person => (
-          <Person id={person.id} amount={person.amount} />
-        ))}
-      </Persons>
-    )
-  }
-}
+const PersonsList = ({ persons }) => (
+  <Persons>
+    {persons.map(person => (
+      <Person id={person.id} amount={person.amount} />
+    ))}
+  </Persons>
+)
 
 const mapStateToProps = state => {
   return {

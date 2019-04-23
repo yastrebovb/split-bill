@@ -29,6 +29,16 @@ export const GlobalStyle = createGlobalStyle`
       opacity: 1;
     }
   }
+
+  @keyframes slideDown {
+    from {
+      transform: translateY(-80px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
 `
 
 export const App = styled.div`

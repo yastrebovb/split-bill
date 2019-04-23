@@ -31,7 +31,7 @@ export default (state = splitReducerDefaultState, action) => {
     case 'CLEAR_BILL':
       return {
         ...state,
-        bill: 0
+        bill: '0'
       }
     case 'CALCULATE_TIPS_AMOUNT':
       return {
