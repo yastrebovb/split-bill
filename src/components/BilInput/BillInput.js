@@ -1,31 +1,8 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { editBill, deleteBill, clearBill } from '../../actions/split'
-import styled from 'styled-components'
+import { Buttons, Button } from './style'
 import { DeleteIcon } from '../../styles/icons/'
-
-const BillInputWrapper = styled.div`
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  margin-bottom: 20px;
-`
-
-const BillInputKey = styled.div`
-  position: relative;
-  width: 25%;
-  margin: 12px;
-  color: #4e4e4e;
-  font-weight: 700;
-  text-align: center;
-  transition: all 0.1s linear;
-  user-select: none;
-  cursor: pointer;
-
-  &:active {
-    transform: scale(1.2);
-  }
-`
 
 class BillInput extends Component {
   state = {
@@ -42,13 +19,13 @@ class BillInput extends Component {
 
   render() {
     return (
-      <BillInputWrapper>
+      <Buttons>
         {this.state.keys.map(key => (
-          <BillInputKey key={key} onClick={() => this.handleKey(key)}>
+          <Button key={key} onClick={() => this.handleKey(key)}>
             {key === 'delete' ? <DeleteIcon /> : key}
-          </BillInputKey>
+          </Button>
         ))}
-      </BillInputWrapper>
+      </Buttons>
     )
   }
 }
