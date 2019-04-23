@@ -118,8 +118,8 @@ export const EditPageIcon = () => (
     height="16px"
     viewBox="0 0 528.899 528.899"
     style={{
-      position: 'absolute',
-      top: '16px',
+      position: 'relative',
+      top: '6px',
       left: '0',
       right: '0',
       marginLeft: 'auto',

@@ -6,7 +6,6 @@ const SwitchLink = withRouter(props => (
   <NavLink
     to={props.location.pathname === '/' ? '/result' : '/'}
     style={{
-      position: 'relative',
       display: 'block',
       width: '96%',
       padding: '10px 0',
@@ -23,7 +22,8 @@ const SwitchLink = withRouter(props => (
       margin: '58px auto -60px',
       width: '80px',
       height: '80px',
-      borderRadius: '50%'
+      borderTopLeftRadius: '160px',
+      borderTopRightRadius: '160px'
     }}
   >
     {props.location.pathname === '/' ? 'Split Bill' : <EditPageIcon />}
