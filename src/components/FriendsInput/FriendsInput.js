@@ -16,7 +16,7 @@ const FriendsCount = styled.div`
   right: 10px;
   font-size: 18px;
   font-weight: 700;
-  color: #4e4e4e;
+  color: ${props => (props.white ? '#ffffff' : '#4e4e4e')};
 `
 
 const TrackStyle = {
@@ -50,29 +50,27 @@ const handleStyle = {
   cursor: 'pointer'
 }
 
-const FriendsInput = ({ editFriends, friends }) => {
-  return (
-    <FriendsInputStyled>
-      <Slider
-        min={1}
-        max={6}
-        step={1}
-        value={friends}
-        style={{
-          height: '50px'
-        }}
-        handleStyle={handleStyle}
-        trackStyle={TrackStyle}
-        railStyle={RailStyle}
-        onChange={value => {
-          editFriends(value)
-        }}
-      />
-      <PersonsIcon />
-      <FriendsCount>{friends}</FriendsCount>
-    </FriendsInputStyled>
-  )
-}
+const FriendsInput = ({ editFriends, friends }) => (
+  <FriendsInputStyled>
+    <Slider
+      min={1}
+      max={6}
+      step={1}
+      value={friends}
+      style={{
+        height: '50px'
+      }}
+      handleStyle={handleStyle}
+      trackStyle={TrackStyle}
+      railStyle={RailStyle}
+      onChange={value => {
+        editFriends(value)
+      }}
+    />
+    <PersonsIcon />
+    <FriendsCount white={friends === 6 ? true : false}>{friends}</FriendsCount>
+  </FriendsInputStyled>
+)
 
 const mapStateToProps = state => {
   return {
@@ -83,7 +81,7 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
   return {
     editFriends: value => {
-      dispatch(editFriends(value))
+      value > 1 && dispatch(editFriends(value))
     }
   }
 }
