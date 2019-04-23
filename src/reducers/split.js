@@ -21,7 +21,7 @@ export default (state = splitReducerDefaultState, action) => {
     case 'EDIT_BILL':
       return {
         ...state,
-        bill: state.bill === 0 ? action.bill : state.bill + action.bill
+        bill: state.bill ? state.bill + action.bill : action.bill
       }
     case 'DELETE_BILL':
       return {

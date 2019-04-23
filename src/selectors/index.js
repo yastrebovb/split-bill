@@ -5,7 +5,7 @@ const personsSelector = state => state.persons
 
 export const getDividedTotal = createSelector(
   splitSelector,
-  split => split.total / split.friends
+  split => (split.total / split.friends).toFixed(2)
 )
 
 export const getPersonsQuantity = createSelector(

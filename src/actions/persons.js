@@ -1,25 +1,12 @@
-export const addPerson = (id, amount, locked = false) => ({
+export const addPerson = (id, amount) => ({
   type: 'ADD_PERSON',
   payload: {
     id,
-    amount,
-    locked
+    amount
   }
 })
 
-export const removePerson = ({ id } = {}) => ({
-  type: 'REMOVE_PERSON',
-  id
-})
-
-export const editPerson = (id, updates) => ({
-  type: 'EDIT_PERSON',
-  id,
-  updates
-})
-
-export const generatePersons = (quantity, amount) => ({
+export const generatePersons = persons => ({
   type: 'GENERATE_PERSONS',
-  quantity,
-  amount
+  persons
 })

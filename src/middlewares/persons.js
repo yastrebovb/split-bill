@@ -1,19 +1,31 @@
 import { generatePersons } from '../actions/persons'
 import { getDividedTotal } from '../selectors/'
 
-const personsMiddleware = ({ dispatch, getState }) => next => action => {
-  next(action)
-  // Add action type check
+const createPerson = (id, amount) => ({
+  id,
+  amount
+})
 
-  switch (action.type) {
-    case 'CALCULATE_TOTAL':
-    case 'EDIT_FRIENDS':
-      dispatch(
-        generatePersons(getState().split.friends, getDividedTotal(getState()))
-      )
-      break
-    default:
-      return
+const getPersons = (quantity, dividedAmount) => {
+  let personsArr = []
+
+  for (let id = 1; id <= quantity; id++) {
+    personsArr.push(createPerson(id, dividedAmount))
+  }
+
+  return personsArr
+}
+
+const personsMiddleware = ({ dispatch, getState }) => next => action => {
+  const quantity = getState().split.friends
+  const dividedAmount = getDividedTotal(getState())
+
+  const generatedPersons = getPersons(quantity, dividedAmount)
+
+  next(action)
+
+  if (action.type === 'CALCULATE_TOTAL' || action.type === 'EDIT_FRIENDS') {
+    dispatch(generatePersons(generatedPersons))
   }
 }
 
