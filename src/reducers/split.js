@@ -6,6 +6,14 @@ const splitReducerDefaultState = {
   tipsAmount: 0
 }
 
+const calculateTipsAmount = (bill, tipsPercentage) =>
+  parseFloat((bill * (tipsPercentage / 100)).toFixed(2))
+
+const deleteLastNumber = bill =>
+  Number(bill) && bill.length > 1 ? bill.slice(0, -1) : '0'
+
+const editBill = (bill, number) => (Number(bill) ? bill + number : number)
+
 export default (state = splitReducerDefaultState, action) => {
   switch (action.type) {
     case 'EDIT_FRIENDS':
@@ -21,12 +29,12 @@ export default (state = splitReducerDefaultState, action) => {
     case 'EDIT_BILL':
       return {
         ...state,
-        bill: state.bill ? state.bill + action.bill : action.bill
+        bill: editBill(state.bill, action.bill)
       }
     case 'DELETE_BILL':
       return {
         ...state,
-        bill: state.bill.slice(0, -1) ? state.bill.slice(0, -1) : '0'
+        bill: deleteLastNumber(state.bill)
       }
     case 'CLEAR_BILL':
       return {
@@ -36,12 +44,12 @@ export default (state = splitReducerDefaultState, action) => {
     case 'CALCULATE_TIPS_AMOUNT':
       return {
         ...state,
-        tipsAmount: (state.bill * (state.tipsPercentage / 100)).toFixed(2)
+        tipsAmount: calculateTipsAmount(state.bill, state.tipsPercentage)
       }
     case 'CALCULATE_TOTAL':
       return {
         ...state,
-        total: +state.bill + +state.tipsAmount
+        total: Number(state.bill) + Number(state.tipsAmount)
       }
     default:
       return state
