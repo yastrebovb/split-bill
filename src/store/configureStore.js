@@ -12,9 +12,5 @@ export default () => {
     applyMiddleware(calculationsMiddleware, personsMiddleware)
   )
 
-  store.subscribe(() => {
-    console.log(store.getState())
-  })
-
   return store
 }
