@@ -15,6 +15,8 @@ export const editBill = bill => ({
 
 export const deleteBill = () => ({ type: 'DELETE_BILL' })
 
+export const clearBill = () => ({ type: 'CLEAR_BILL' })
+
 export const calculateTipsAmount = () => ({ type: 'CALCULATE_TIPS_AMOUNT' })
 
 export const calculateTotal = () => ({ type: 'CALCULATE_TOTAL' })

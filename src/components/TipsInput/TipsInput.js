@@ -6,7 +6,7 @@ import { CheckMark } from '../../styles/icons/'
 
 const Tips = styled.div`
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   margin-bottom: 24px;
 `
 
@@ -21,6 +21,7 @@ const Tip = styled.div`
     props.status === 'selected' ? '#2ecc71' : '#d1d8e0'}
   border-radius: 4px;
   transition: all .2s linear;
+  user-select: none;
   cursor: pointer;
 `
 

@@ -26,7 +26,12 @@ export default (state = splitReducerDefaultState, action) => {
     case 'DELETE_BILL':
       return {
         ...state,
-        bill: state.bill.slice(0, -1)
+        bill: state.bill.slice(0, -1) ? state.bill.slice(0, -1) : 0
+      }
+    case 'CLEAR_BILL':
+      return {
+        ...state,
+        bill: 0
       }
     case 'CALCULATE_TIPS_AMOUNT':
       return {

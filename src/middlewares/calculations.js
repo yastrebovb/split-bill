@@ -9,6 +9,7 @@ const calculateTipsMiddleware = ({ dispatch }) => next => action => {
     case 'EDIT_TIPS':
     case 'EDIT_BILL':
     case 'DELETE_BILL':
+    case 'CLEAR_BILL':
       dispatch(calculateTipsAmount())
       dispatch(calculateTotal())
       break
