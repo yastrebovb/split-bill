@@ -1,12 +1,19 @@
 import React, { Component } from 'react'
 import PersonsList from '../../components/PersonsList/PersonsList'
+import styled from 'styled-components'
+
+const ResultPageWrap = styled.div`
+  width: 96%;
+  height: 316px;
+  margin: 0 auto;
+`
 
 export default class ResultPage extends Component {
   render() {
     return (
-      <div className="result-page">
+      <ResultPageWrap>
         <PersonsList />
-      </div>
+      </ResultPageWrap>
     )
   }
 }
