@@ -5,8 +5,8 @@ import { Persons } from './style'
 
 const PersonsList = ({ persons }) => (
   <Persons>
-    {persons.map(person => (
-      <Person id={person.id} amount={person.amount} />
+    {persons.map(({ personId, personAmount }) => (
+      <Person id={personId} key={personId} amount={personAmount} />
     ))}
   </Persons>
 )

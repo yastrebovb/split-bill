@@ -1,15 +1,15 @@
 const personsReducerDefaultState = [
   {
     id: 1,
-    amount: 1
+    amount: 0
   },
   {
     id: 2,
-    amount: 1
+    amount: 0
   },
   {
     id: 3,
-    amount: 1
+    amount: 0
   }
 ]
 
