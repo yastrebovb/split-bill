@@ -1,4 +1,5 @@
 import styled, { createGlobalStyle } from 'styled-components'
+import { zoomIn } from '../animations/'
 
 export const GlobalStyle = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
@@ -10,6 +11,23 @@ export const GlobalStyle = createGlobalStyle`
 
   *, *:before, *:after {
     box-sizing: inherit;
+  }
+
+  @keyframes zoomInFade {
+    0%{
+      transform: scale(1);
+      opacity: 0.5;
+    }
+
+    50% {
+      transform: scale(1.25);
+      opacity: 0.75;
+    }
+
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
   }
 `
 

@@ -20,3 +20,12 @@ export const Tip = styled.div`
   user-select: none;
   cursor: pointer;
 `
+
+export const CheckMarkAnimated = styled.div`
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 35px;
+  height: 15px;
+  animation: zoomInFade 0.3s ease-in-out;
+`

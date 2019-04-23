@@ -6,7 +6,7 @@ export const CheckMark = () => (
     style={{
       position: 'absolute',
       top: '0',
-      left: '42px',
+      right: '-7px',
       width: '35px',
       height: '15px'
     }}
