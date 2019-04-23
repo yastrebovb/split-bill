@@ -1,5 +1,4 @@
 import styled, { createGlobalStyle } from 'styled-components'
-import { zoomIn } from '../animations/'
 
 export const GlobalStyle = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
@@ -43,7 +42,7 @@ export const GlobalStyle = createGlobalStyle`
 
 export const App = styled.div`
   max-width: 450px;
-  margin: 50px auto;
+  margin: 12px auto;
   padding: 20px 12px;
   box-shadow: 3px 4px 25px -15px rgba(179, 179, 179, 1);
   border-radius: 10px;

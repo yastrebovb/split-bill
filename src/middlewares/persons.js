@@ -17,12 +17,12 @@ const getPersons = (quantity, dividedAmount) => {
 }
 
 const personsMiddleware = ({ dispatch, getState }) => next => action => {
+  next(action)
+
   const quantity = getState().split.friends
   const dividedAmount = getDividedTotal(getState())
 
   const generatedPersons = getPersons(quantity, dividedAmount)
-
-  next(action)
 
   if (action.type === 'CALCULATE_TOTAL' || action.type === 'EDIT_FRIENDS') {
     dispatch(generatePersons(generatedPersons))

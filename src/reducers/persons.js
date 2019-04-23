@@ -18,7 +18,6 @@ export default (state = personsReducerDefaultState, action) => {
     case 'ADD_PERSON':
       return [...state, action.payload]
     case 'GENERATE_PERSONS':
-      console.log('reducer generate')
       return action.persons
     default:
       return state
