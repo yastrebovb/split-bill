@@ -6,31 +6,31 @@ import { CheckMark } from '../../styles/icons/'
 
 class TipsInput extends Component {
   state = {
-    tipsValues: [0, 10, 20, 30],
+    tipsPercentages: [0, 10, 20, 30],
     currentTip: 0
   }
 
   handleTipClick = tipValue => {
-    this.props.editTips(tipValue)
-
     this.setState({
       currentTip: tipValue
     })
+
+    this.props.editTips(tipValue)
   }
 
   render() {
+    const { tipsPercentages, currentTip } = this.state
+
     return (
       <Tips>
-        {this.state.tipsValues.map((value, index) => (
+        {tipsPercentages.map(tip => (
           <Tip
-            status={
-              value === this.state.currentTip ? 'selected' : 'not-selected'
-            }
-            key={index}
-            onClick={this.handleTipClick.bind(this, value)}
+            key={tip}
+            status={tip === currentTip ? 'selected' : 'not-selected'}
+            onClick={this.handleTipClick.bind(this, tip)}
           >
-            {value}%
-            {value === this.state.currentTip && (
+            {tip}%
+            {tip === currentTip && (
               <CheckMarkAnimated>
                 <CheckMark />
               </CheckMarkAnimated>

@@ -6,33 +6,29 @@ import { DeleteIcon } from '../../styles/icons/'
 
 class BillInput extends Component {
   state = {
-    keys: ['1', '2', '3', '4', '5', '6', '7', '8', '9', 'AC', '0', 'delete']
+    buttons: ['1', '2', '3', '4', '5', '6', '7', '8', '9', 'AC', '0', 'delete']
   }
 
-  handleKey = keyValue => {
-    keyValue === 'AC'
+  handleKey = btnValue => {
+    btnValue === 'AC'
       ? this.props.clearBill()
-      : keyValue === 'delete'
+      : btnValue === 'delete'
       ? this.props.deleteBill()
-      : this.props.editBill(keyValue)
+      : this.props.editBill(btnValue)
   }
 
   render() {
+    const { buttons } = this.state
+
     return (
       <Buttons>
-        {this.state.keys.map(key => (
-          <Button key={key} onClick={() => this.handleKey(key)}>
-            {key === 'delete' ? <DeleteIcon /> : key}
+        {buttons.map(btn => (
+          <Button value={btn} key={btn} onClick={() => this.handleKey(btn)}>
+            {btn === 'delete' ? <DeleteIcon /> : btn}
           </Button>
         ))}
       </Buttons>
     )
-  }
-}
-
-const mapStateToProps = state => {
-  return {
-    bill: state.split.bill
   }
 }
 
@@ -51,6 +47,6 @@ const mapDispatchToProps = dispatch => {
 }
 
 export default connect(
-  mapStateToProps,
+  null,
   mapDispatchToProps
 )(BillInput)
