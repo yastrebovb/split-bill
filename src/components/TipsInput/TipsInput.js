@@ -1,29 +1,8 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { editTips } from '../../actions/split'
-import styled from 'styled-components'
+import { Tips, Tip } from './style'
 import { CheckMark } from '../../styles/icons/'
-
-const Tips = styled.div`
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 24px;
-`
-
-const Tip = styled.div`
-  position: relative;
-  width: 18%;
-  padding: 7px 4px;
-  text-align: center;
-  color: #747d8c;
-  border: 1.5px solid;
-  border-color: ${props =>
-    props.status === 'selected' ? '#2ecc71' : '#d1d8e0'}
-  border-radius: 4px;
-  transition: all .2s linear;
-  user-select: none;
-  cursor: pointer;
-`
 
 class TipsInput extends Component {
   state = {
