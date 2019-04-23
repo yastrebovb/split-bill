@@ -1,11 +1,11 @@
 import React from 'react'
-import styled from 'styled-components'
+import { PersonStyled, PersonId, PersonAmount } from './style'
 
-const PersonStyled = styled.div`
-  flex: 1 1 0;
-  border-bottom: 2px solid rgba(209, 216, 224, 0.41);
-`
-
-const Person = props => <PersonStyled>{props.amount}</PersonStyled>
+const Person = ({ id, amount }) => (
+  <PersonStyled>
+    <PersonId>Person {String.fromCharCode(96 + id)}</PersonId>
+    <PersonAmount>${amount}</PersonAmount>
+  </PersonStyled>
+)
 
 export default Person
