@@ -8,6 +8,7 @@ export const GlobalStyle = createGlobalStyle`
     height: 100%;
     box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
+    background-color: #f5f5f5;
   }
 
   html, body, #root{
@@ -56,7 +57,8 @@ export const App = styled.div`
   margin: auto;
   padding: 20px 12px;
   box-shadow: 3px 4px 25px -15px rgba(179, 179, 179, 1);
-  border-radius: 10px;
+  border-radius: 6px;
+  background-color: #ffffff;
   overflow: hidden;
 
   ${media.phone`
