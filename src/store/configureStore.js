@@ -1,4 +1,4 @@
-import { createStore, applyMiddleware } from 'redux'
+import { createStore, applyMiddleware, compose } from 'redux'
 import splitReducer from '../reducers/split'
 import personsReducer from '../reducers/persons'
 import { calculationsMiddleware, personsMiddleware } from '../middlewares/'
@@ -9,7 +9,10 @@ export default () => {
       split: splitReducer(state.split, action, state),
       persons: personsReducer(state.persons, action, state)
     }),
-    applyMiddleware(calculationsMiddleware, personsMiddleware)
+    compose(
+      applyMiddleware(calculationsMiddleware, personsMiddleware),
+      window.devToolsExtension ? window.devToolsExtension() : f => f
+    )
   )
 
   return store
