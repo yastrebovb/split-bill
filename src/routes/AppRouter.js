@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import { HashRouter, Route, Switch } from 'react-router-dom'
 import SwitchLink from '../components/SwitchLink/SwitchLink'
 import EditPage from '../pages/EditPage/EditPage'
 import ResultPage from '../pages/ResultPage/ResultPage'
@@ -9,7 +9,7 @@ import { GlobalStyle, App } from '../styles/global'
 import 'normalize.css'
 
 const AppRouter = () => (
-  <BrowserRouter>
+  <HashRouter>
     <App>
       <Dots />
       <TotalBar />
@@ -20,7 +20,7 @@ const AppRouter = () => (
       <SwitchLink />
       <GlobalStyle />
     </App>
-  </BrowserRouter>
+  </HashRouter>
 )
 
 export default AppRouter

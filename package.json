@@ -1,7 +1,9 @@
 {
-  "name": "split-bill-app",
+  "name": "split-bill",
+  "homepage": "https://yastrebovb.github.io/split-bill",
   "version": "0.1.0",
   "private": true,
+  "publicPath": "./",
   "dependencies": {
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
@@ -10,6 +12,9 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "deploy:b": "npm run build && npm run deploy",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -23,6 +28,7 @@
     "not op_mini all"
   ],
   "devDependencies": {
+    "gh-pages": "^2.0.1",
     "normalize.css": "^8.0.1",
     "rc-slider": "^8.6.9",
     "react-redux": "^7.0.2",
