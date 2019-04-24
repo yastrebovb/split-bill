@@ -1,13 +1,13 @@
 {
-  "main.js": "/split-bill/static/js/main.b7b17baa.chunk.js",
-  "main.js.map": "/split-bill/static/js/main.b7b17baa.chunk.js.map",
+  "main.js": "/split-bill/static/js/main.f4106d19.chunk.js",
+  "main.js.map": "/split-bill/static/js/main.f4106d19.chunk.js.map",
   "runtime~main.js": "/split-bill/static/js/runtime~main.73cb3448.js",
   "runtime~main.js.map": "/split-bill/static/js/runtime~main.73cb3448.js.map",
   "static/css/2.865c6927.chunk.css": "/split-bill/static/css/2.865c6927.chunk.css",
   "static/js/2.c62ee167.chunk.js": "/split-bill/static/js/2.c62ee167.chunk.js",
   "static/js/2.c62ee167.chunk.js.map": "/split-bill/static/js/2.c62ee167.chunk.js.map",
   "index.html": "/split-bill/index.html",
-  "precache-manifest.830b2f99ad3b8647141114485b4a14c0.js": "/split-bill/precache-manifest.830b2f99ad3b8647141114485b4a14c0.js",
+  "precache-manifest.65145725d5a5ef4a19b0a591623fa7c1.js": "/split-bill/precache-manifest.65145725d5a5ef4a19b0a591623fa7c1.js",
   "service-worker.js": "/split-bill/service-worker.js",
   "static/css/2.865c6927.chunk.css.map": "/split-bill/static/css/2.865c6927.chunk.css.map"
 }

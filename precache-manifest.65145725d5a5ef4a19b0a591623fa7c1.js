@@ -4,8 +4,8 @@ self.__precacheManifest = [
     "url": "/split-bill/static/js/runtime~main.73cb3448.js"
   },
   {
-    "revision": "7312464e9f838172b88e",
-    "url": "/split-bill/static/js/main.b7b17baa.chunk.js"
+    "revision": "21c9148018e81bca31e9",
+    "url": "/split-bill/static/js/main.f4106d19.chunk.js"
   },
   {
     "revision": "0fe751c1de7c999dd45c",
@@ -16,7 +16,7 @@ self.__precacheManifest = [
     "url": "/split-bill/static/css/2.865c6927.chunk.css"
   },
   {
-    "revision": "46d8310d56169da27d7943eceb1ab3c8",
+    "revision": "4445a00c3ac9debbe74cbb938c195aad",
     "url": "/split-bill/index.html"
   }
 ];
