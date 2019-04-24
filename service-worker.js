@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/yastrebovb/split-bill/precache-manifest.606405840e3a8e1bbe8ec7b408147503.js"
+  "/split-bill/precache-manifest.830b2f99ad3b8647141114485b4a14c0.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/yastrebovb/split-bill/index.html", {
+workbox.routing.registerNavigationRoute("/split-bill/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });
