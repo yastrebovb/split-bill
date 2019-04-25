@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const PersonStyled = styled.div`
+export const PersonStyled = styled.li`
   display: flex;
   flex-direction: column;
   justify-content: center;
