@@ -10,11 +10,16 @@ class BillInput extends Component {
   }
 
   handleKey = btnValue => {
-    btnValue === 'AC'
-      ? this.props.clearBill()
-      : btnValue === 'delete'
-      ? this.props.deleteBill()
-      : this.props.editBill(btnValue)
+    switch (btnValue) {
+      case 'AC': {
+        return this.props.clearBill()
+      }
+      case 'delete': {
+        return this.props.deleteBill()
+      }
+      default:
+        return this.props.editBill(btnValue)
+    }
   }
 
   render() {
@@ -23,7 +28,12 @@ class BillInput extends Component {
     return (
       <Buttons>
         {buttons.map(btn => (
-          <Button value={btn} key={btn} onClick={() => this.handleKey(btn)}>
+          <Button
+            type="button"
+            value={btn}
+            key={btn}
+            onClick={() => this.handleKey(btn)}
+          >
             {btn === 'delete' ? <DeleteIcon /> : btn}
           </Button>
         ))}
