@@ -1,0 +1,10 @@
+export const EDIT_FRIENDS = 'EDIT_FRIENDS'
+export const EDIT_TIPS = 'EDIT_TIPS'
+export const EDIT_BILL = 'EDIT_BILL'
+export const DELETE_BILL = 'DELETE_BILL'
+export const CLEAR_BILL = 'CLEAR_BILL'
+export const CALCULATE_TIPS_AMOUNT = 'CALCULATE_TIPS_AMOUNT'
+export const CALCULATE_TOTAL = 'CALCULATE_TOTAL'
+
+export const ADD_PERSON = 'ADD_PERSON'
+export const GENERATE_PERSONS = 'GENERATE_PERSONS'

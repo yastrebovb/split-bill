@@ -1,3 +1,5 @@
+import { ADD_PERSON, GENERATE_PERSONS } from '../constants/actionTypes'
+
 const personsReducerDefaultState = [
   {
     id: 1,
@@ -15,9 +17,9 @@ const personsReducerDefaultState = [
 
 export default (state = personsReducerDefaultState, action) => {
   switch (action.type) {
-    case 'ADD_PERSON':
+    case ADD_PERSON:
       return [...state, action.payload]
-    case 'GENERATE_PERSONS':
+    case GENERATE_PERSONS:
       return action.persons
     default:
       return state
