@@ -4,7 +4,7 @@ import styled from 'styled-components'
 
 const ResultPageWrap = styled.div`
   width: 96%;
-  height: 316px;
+  height: 315px;
   margin: 0 auto;
 `
 
