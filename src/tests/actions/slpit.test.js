@@ -36,33 +36,17 @@ test('should setup edit bill action object', () => {
 })
 
 test('should setup delete bill action object', () => {
-  const action = deleteBill()
-
-  expect(action).toEqual({
-    type: 'DELETE_BILL'
-  })
+  expect(deleteBill()).toEqual({ type: 'DELETE_BILL' })
 })
 
 test('should setup clear bill action object', () => {
-  const action = clearBill()
-
-  expect(action).toEqual({
-    type: 'CLEAR_BILL'
-  })
+  expect(clearBill()).toEqual({ type: 'CLEAR_BILL' })
 })
 
 test('should setup calculate tips amount action object', () => {
-  const action = calculateTipsAmount()
-
-  expect(action).toEqual({
-    type: 'CALCULATE_TIPS_AMOUNT'
-  })
+  expect(calculateTipsAmount()).toEqual({ type: 'CALCULATE_TIPS_AMOUNT' })
 })
 
 test('should setup calculate total action object', () => {
-  const action = calculateTotal()
-
-  expect(action).toEqual({
-    type: 'CALCULATE_TOTAL'
-  })
+  expect(calculateTotal()).toEqual({ type: 'CALCULATE_TOTAL' })
 })
