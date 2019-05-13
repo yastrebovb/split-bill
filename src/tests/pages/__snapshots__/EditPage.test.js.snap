@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render EditPage correctly 1`] = `
+<styled.div>
+  <ConnectFunction />
+  <ConnectFunction />
+  <ConnectFunction />
+</styled.div>
+`;

@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render Dots correctly 1`] = `
+<styled.li>
+  <styled.div>
+    Person 
+    a
+  </styled.div>
+  <styled.div>
+    $
+    0
+  </styled.div>
+</styled.li>
+`;
+
+exports[`should render Person correctly 1`] = `
+<styled.li>
+  <styled.div>
+    Person 
+    a
+  </styled.div>
+  <styled.div>
+    $
+    0
+  </styled.div>
+</styled.li>
+`;
