@@ -22,7 +22,7 @@ const calculateTipsAmount = (bill, tipsPercentage) =>
 const deleteLastNumber = bill =>
   Number(bill) && bill.length > 1 ? bill.slice(0, -1) : '0'
 
-const editBill = (bill, number) => (Number(bill) ? bill + number : number)
+const editBill = (bill, number) => String(Number(bill) ? bill + number : number)
 
 export default (state = splitReducerDefaultState, action) => {
   switch (action.type) {
