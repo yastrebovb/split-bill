@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render Dots correctly 1`] = `
+<styled.div>
+  <styled.div
+    red={true}
+  />
+  <styled.div
+    orange={true}
+  />
+  <styled.div
+    green={true}
+  />
+</styled.div>
+`;

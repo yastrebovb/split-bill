@@ -22,7 +22,9 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "deploy:b": "npm run build && npm run deploy",
-    "test": "react-scripts test",
+    "test": "jest --config=jest.config.json",
+    "test:watch": "jest --watch --config=jest.config.json",
+    "test:converage": "jest --coverage --colors",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -35,6 +37,12 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "gh-pages": "^2.0.1"
+    "babel-preset-react-app": "^9.0.0",
+    "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "^1.13.0",
+    "enzyme-to-json": "^3.3.5",
+    "gh-pages": "^2.0.1",
+    "jest": "^24.8.0",
+    "react-test-renderer": "^16.8.6"
   }
 }
