@@ -3,7 +3,7 @@ import Person from '../Person/Person'
 import { connect } from 'react-redux'
 import { Persons } from './style'
 
-const PersonsList = ({ persons }) => (
+export const PersonsList = ({ persons }) => (
   <Persons>
     {persons.map(({ id, amount }) => (
       <Person id={id} key={id} amount={amount} />

@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render TipsInput correctly 1`] = `
+<styled.div>
+  <styled.div
+    key="0"
+    onClick={[Function]}
+    status="selected"
+  >
+    0
+    %
+    <styled.div>
+      <CheckMark />
+    </styled.div>
+  </styled.div>
+  <styled.div
+    key="10"
+    onClick={[Function]}
+    status="not-selected"
+  >
+    10
+    %
+  </styled.div>
+  <styled.div
+    key="20"
+    onClick={[Function]}
+    status="not-selected"
+  >
+    20
+    %
+  </styled.div>
+  <styled.div
+    key="30"
+    onClick={[Function]}
+    status="not-selected"
+  >
+    30
+    %
+  </styled.div>
+</styled.div>
+`;

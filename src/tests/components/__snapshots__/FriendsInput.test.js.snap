@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render FriendsInput correctly 1`] = `
+<styled.div>
+  <ComponentEnhancer(undefined)
+    activeDotStyle={Object {}}
+    className=""
+    disabled={false}
+    dotStyle={Object {}}
+    dots={false}
+    handle={[Function]}
+    handleStyle={
+      Object {
+        "backgroundColor": "#2ecc4a",
+        "borderRadius": "2px",
+        "cursor": "pointer",
+        "height": 54,
+        "outline": "none",
+        "position": "relative",
+        "top": "-70px",
+        "transition": "all .075s linear",
+        "width": 8,
+      }
+    }
+    included={true}
+    marks={Object {}}
+    max={6}
+    min={1}
+    onAfterChange={[Function]}
+    onBeforeChange={[Function]}
+    onChange={[Function]}
+    prefixCls="rc-slider"
+    railStyle={
+      Object {
+        "backgroundColor": "rgba(239, 237, 232, 0.5)",
+        "borderRadius": "4px",
+        "cursor": "pointer",
+        "height": "30px",
+        "transition": "all .075s linear",
+      }
+    }
+    step={1}
+    style={
+      Object {
+        "height": "50px",
+      }
+    }
+    trackStyle={
+      Object {
+        "backgroundColor": "#2ecc71",
+        "borderBottomLeftRadius": "4px",
+        "borderTopLeftRadius": "4px",
+        "cursor": "pointer",
+        "height": "30px",
+        "position": "relative",
+        "top": "-30px",
+        "transition": "all .075s linear",
+      }
+    }
+    vertical={false}
+  />
+  <PersonsIcon />
+  <styled.div
+    white={false}
+  />
+</styled.div>
+`;

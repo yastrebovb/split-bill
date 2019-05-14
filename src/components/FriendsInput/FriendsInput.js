@@ -11,7 +11,7 @@ import {
 } from './style'
 import { PersonsIcon } from '../../styles/icons/'
 
-const FriendsInput = ({ editFriends, friends }) => (
+export const FriendsInput = ({ editFriends, friends }) => (
   <FriendsInputStyled>
     <Slider
       min={1}

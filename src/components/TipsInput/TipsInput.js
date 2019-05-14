@@ -4,7 +4,7 @@ import { editTips } from '../../actions/split'
 import { Tips, Tip, CheckMarkAnimated } from './style'
 import { CheckMark } from '../../styles/icons/'
 
-class TipsInput extends Component {
+export class TipsInput extends Component {
   state = {
     tipsPercentages: [0, 10, 20, 30],
     currentTip: 0

@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render TotalBar correctly 1`] = `
+<styled.div>
+  <styled.div>
+    <styled.p
+      medium={true}
+    >
+      Total
+    </styled.p>
+    <styled.p
+      big={true}
+    >
+      $
+      0
+    </styled.p>
+  </styled.div>
+  <styled.div>
+    <styled.div>
+      <styled.p
+        small={true}
+      >
+        Bill
+      </styled.p>
+      <styled.p
+        small={true}
+      >
+        $
+        0
+      </styled.p>
+    </styled.div>
+    <styled.div>
+      <styled.p
+        small={true}
+      >
+        Friends
+      </styled.p>
+      <styled.p
+        small={true}
+      >
+        3
+      </styled.p>
+    </styled.div>
+    <styled.div>
+      <styled.p
+        small={true}
+      >
+        Tips(
+        0
+        %)
+      </styled.p>
+      <styled.p
+        small={true}
+      >
+        $
+        0
+      </styled.p>
+    </styled.div>
+  </styled.div>
+</styled.div>
+`;

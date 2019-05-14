@@ -4,7 +4,7 @@ import { editBill, deleteBill, clearBill } from '../../actions/split'
 import { Buttons, Button } from './style'
 import { DeleteIcon } from '../../styles/icons/'
 
-class BillInput extends Component {
+export class BillInput extends Component {
   state = {
     buttons: ['1', '2', '3', '4', '5', '6', '7', '8', '9', 'AC', '0', 'delete']
   }

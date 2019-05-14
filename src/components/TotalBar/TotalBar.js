@@ -8,7 +8,7 @@ import {
   Text
 } from './style'
 
-const TotalBar = ({
+export const TotalBar = ({
   split: { total, bill, friends, tipsPercentage, tipsAmount }
 }) => (
   <TotalBarWrapper>
